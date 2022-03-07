@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pro_healer_three_circles/views/Landing_screen/landing.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,23 +25,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const LogInScreen(),
-    );
-  }
-}
-
-class LogInScreen extends StatefulWidget {
-  const LogInScreen({Key? key}) : super(key: key);
-
-  @override
-  State<LogInScreen> createState() => _LogInScreenState();
-}
-
-class _LogInScreenState extends State<LogInScreen> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Center(child: Text('Start Building Guys.')),
+      home: Splash(),
     );
   }
 }
