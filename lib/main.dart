@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:pro_healer_three_circles/registration/account_setup.dart';
+import 'package:pro_healer_three_circles/registration/profile_questions/Questions_profile01.dart';
+import 'package:pro_healer_three_circles/registration/verification.dart';
+
+import 'constants/Api_strings.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const LogInScreen(),
+      home: verifyAccount(),
     );
   }
 }
@@ -39,8 +44,13 @@ class LogInScreen extends StatefulWidget {
 class _LogInScreenState extends State<LogInScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(child: Text('Start Building Guys.')),
+    return Column(
+      children: [
+        Container(
+          child: Center(child: Text('Start Building Guys.')),
+        ),
+        Text(ApiStrings.SignIn_Url)
+      ],
     );
   }
 }
