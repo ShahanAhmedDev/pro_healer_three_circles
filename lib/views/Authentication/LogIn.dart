@@ -20,6 +20,10 @@ class LogInScreen extends StatefulWidget {
 }
 
 class _LogInScreenState extends State<LogInScreen> {
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
+
+
   // const kSize= margin:EdgeInsets.only(right: 230.0);
   Color enabled = const Color(0xFF827F8A);
   Color enabledtxt = Colors.white;
@@ -27,6 +31,21 @@ class _LogInScreenState extends State<LogInScreen> {
   Color backgroundColor = const Color(0x62d8d8d8);
   bool ispasswordev = true;
   Gender? selected;
+
+  @override
+  void initState() {
+    super.initState();
+    _emailController = TextEditingController();
+    _passwordController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -266,7 +285,17 @@ class _LogInScreenState extends State<LogInScreen> {
                               ),
                               padding: const EdgeInsets.all(8.0),
                               width: 400.0,
-                              child: TextField(
+                              child: TextFormField(
+                                initialValue: _emailController.text,
+                                onChanged: (val){
+                                  setState(() {
+                                    _emailController.text = val;
+                                    print('----------');
+                                    print(_emailController.text);
+                                    print('----------');
+
+                                  });
+                                },
                                 onTap: () {
                                   setState(() {
                                     selected = Gender.Email;
@@ -304,7 +333,7 @@ class _LogInScreenState extends State<LogInScreen> {
                             child: Container(
                               // width: we * 0.9,
                               // height: he * 0.071,
-                              margin: EdgeInsets.symmetric(horizontal: 70.0),
+                              margin: const EdgeInsets.symmetric(horizontal: 70.0),
 
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20.0),
@@ -313,7 +342,10 @@ class _LogInScreenState extends State<LogInScreen> {
                                       : backgroundColor),
                               padding: const EdgeInsets.all(8.0),
                               width: 400.0,
+
                               child: TextField(
+                                onChanged: (val){
+                                },
                                 onTap: () {
                                   setState(() {
                                     selected = Gender.password;
