@@ -9,7 +9,6 @@ import 'package:pro_healer_three_circles/registration/profile_questions/create_p
 import '../constant_things/appbar_widget.dart';
 import '../constant_things/footer.dart';
 import '../constant_things/nav_button.dart';
-import 'anmition/fadeanimation.dart';
 
 class verifyAccount extends StatefulWidget {
   const verifyAccount({Key? key}) : super(key: key);

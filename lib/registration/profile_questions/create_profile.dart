@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../constant_things/appbar_widget.dart';
 import '../../constant_things/footer.dart';
 import '../../constant_things/nav_button.dart';
-import '../anmition/fadeanimation.dart';
 import 'Questions_profile01.dart';
 //import '../widgets/appbar_widget.dart';
 

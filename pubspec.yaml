@@ -37,6 +37,7 @@ dependencies:
   google_fonts: ^2.1.0
   footer: ^0.0.4
   country_state_city_picker: ^1.2.8
+  rflutter_alert: ^2.0.4
 
 
 

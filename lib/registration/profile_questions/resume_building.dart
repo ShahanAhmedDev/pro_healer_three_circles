@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pro_healer_three_circles/registration/profile_questions/new_profile.dart';
 import '../../constant_things/appbar_widget.dart';
 import '../../constant_things/footer.dart';
 import '../../constant_things/nav_button.dart';
@@ -67,12 +68,20 @@ class _resumeScreenState extends State<resumeScreen> {
                               ),
                               SizedBox(width: 20.0),
                               NavButton(
+                                page:NewProfile(),
                                 widt: 10.0,
                                 color: Colors.blueGrey,
                                 heig: 5.0,
                                 txtcolor: Colors.white,
-                                page: verifyAccount(),
                                 text: 'Build your Resume',
+                                // onpressed: Form(child: Container(
+                                //   child: Column(
+                                //     children: [
+                                //       Text("hello")
+                                //     ],
+                                //   ),
+                                // ),
+                                // ),
                               ),
                             ],
                           ),

@@ -9,7 +9,6 @@ import 'package:pro_healer_three_circles/registration/verification.dart';
 
 import '../constant_things/appbar_widget.dart';
 import '../constant_things/nav_button.dart';
-import 'anmition/fadeanimation.dart';
 
 class firstScreen extends StatefulWidget {
   // const firstScreen({Key? key}) : super(key: key);
