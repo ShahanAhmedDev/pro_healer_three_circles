@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pro_healer_three_circles/services/network/auth_service/auth_class.dart';
 import '../../constants/color_constant.dart';
 import '../../constants/nav_button.dart';
 import 'SignUp.dart';
@@ -22,7 +23,6 @@ class LogInScreen extends StatefulWidget {
 class _LogInScreenState extends State<LogInScreen> {
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
-
 
   // const kSize= margin:EdgeInsets.only(right: 230.0);
   Color enabled = const Color(0xFF827F8A);
@@ -45,7 +45,6 @@ class _LogInScreenState extends State<LogInScreen> {
     _emailController.dispose();
     _passwordController.dispose();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -262,8 +261,7 @@ class _LogInScreenState extends State<LogInScreen> {
                               child: Text(
                                 "Please Sign-In to Continue",
                                 style: GoogleFonts.heebo(
-                                    color: kcolor,
-                                    letterSpacing: 0.5),
+                                    color: kcolor, letterSpacing: 0.5),
                               ),
                             ),
                           ),
@@ -287,13 +285,13 @@ class _LogInScreenState extends State<LogInScreen> {
                               width: 400.0,
                               child: TextFormField(
                                 initialValue: _emailController.text,
-                                onChanged: (val){
+                                onChanged: (val) {
                                   setState(() {
                                     _emailController.text = val;
                                     print('----------');
+                                    print("email");
                                     print(_emailController.text);
                                     print('----------');
-
                                   });
                                 },
                                 onTap: () {
@@ -333,7 +331,8 @@ class _LogInScreenState extends State<LogInScreen> {
                             child: Container(
                               // width: we * 0.9,
                               // height: he * 0.071,
-                              margin: const EdgeInsets.symmetric(horizontal: 70.0),
+                              margin:
+                                  const EdgeInsets.symmetric(horizontal: 70.0),
 
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20.0),
@@ -343,10 +342,16 @@ class _LogInScreenState extends State<LogInScreen> {
                               padding: const EdgeInsets.all(8.0),
                               width: 400.0,
 
-                              child: TextField(
-                                onChanged: (val){
-                                },
-                                onTap: () {
+                              child: TextFormField(
+                                initialValue: _passwordController.text,
+                                onChanged: (val) {
+                                  setState(() {
+                                    _passwordController.text = val;
+                                    print('----------');
+                                    print("password");
+                                    print(_passwordController.text);
+                                    print('----------');
+                                  });
                                   setState(() {
                                     selected = Gender.password;
 
@@ -425,12 +430,12 @@ class _LogInScreenState extends State<LogInScreen> {
                             delay: 1,
                             child: TextButton(
                               child: Text("Forgot password?",
-                              style: GoogleFonts.heebo(
-                                color: kcolor.withOpacity(0.9),
+                                  style: GoogleFonts.heebo(
+                                    color: kcolor.withOpacity(0.9),
 
-                                // color: const Color(0xFF0DF5E4).withOpacity(0.9),
-                                letterSpacing: 0.5,
-                              )),
+                                    // color: const Color(0xFF0DF5E4).withOpacity(0.9),
+                                    letterSpacing: 0.5,
+                                  )),
                               onPressed: () {},
                             ),
                           ),
