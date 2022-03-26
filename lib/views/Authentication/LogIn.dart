@@ -21,8 +21,12 @@ class LogInScreen extends StatefulWidget {
 }
 
 class _LogInScreenState extends State<LogInScreen> {
+  var authInstance = AuthService();
+
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
+  String email = "Saad12";
+  String password = "Saad@123";
 
   // const kSize= margin:EdgeInsets.only(right: 230.0);
   Color enabled = const Color(0xFF827F8A);
@@ -333,7 +337,6 @@ class _LogInScreenState extends State<LogInScreen> {
                               // height: he * 0.071,
                               margin:
                                   const EdgeInsets.symmetric(horizontal: 70.0),
-
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20.0),
                                   color: selected == Gender.password
@@ -404,7 +407,27 @@ class _LogInScreenState extends State<LogInScreen> {
                           FadeAnimation(
                             delay: 1,
                             child: TextButton(
-                                onPressed: () {},
+                                onPressed: () async{
+                                  var auth = await authInstance.login(
+                                      userName: email,
+                                      password: password);
+                                  if (auth == true) {
+                                    print('Inside auth var, pushing next screen');
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => SignUpScreen(),
+                                      ),
+                                    );
+                                  } else {
+                                    const SnackBar(
+                                      content: Text(
+                                          'Sorry, your username or password is incorrect. Try again.'),
+                                    );
+                                  }
+                                  // _emailController.text;
+                                  // _passwordController.text;
+                                },
                                 child: Text(
                                   "Login",
                                   style: GoogleFonts.heebo(
