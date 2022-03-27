@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:footer/footer.dart';
 import 'package:pro_healer_three_circles/registration/profile_questions/Experience.dart';
+import 'package:pro_healer_three_circles/registration/profile_questions/skill.dart';
 import '../../constant_things/appbar_widget.dart';
 import '../../constant_things/footer.dart';
 import '../../constant_things/nav_button.dart';
@@ -59,7 +60,7 @@ class _NewProfileState extends State<NewProfile> {
                         height: 20,
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 200.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 400.0),
                         child: TextFormField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
@@ -69,7 +70,7 @@ class _NewProfileState extends State<NewProfile> {
                             hintText: "Dentist",
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -98,7 +99,7 @@ class _NewProfileState extends State<NewProfile> {
                     widt: 10,
                     text: 'Next, Add Your Experience',
                     txtcolor: Colors.white,
-                    page: Experience(),
+                    page: SkillScreen(),
                   )
                 ],
               ),

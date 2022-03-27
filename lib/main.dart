@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:pro_healer_three_circles/registration/account_setup.dart';
+import 'package:pro_healer_three_circles/registration/profile_questions/BioPage.dart';
 import 'package:pro_healer_three_circles/registration/profile_questions/Experience.dart';
+//import 'package:pro_healer_three_circles/registration/profile_questions/Experience.dart';
 import 'package:pro_healer_three_circles/registration/profile_questions/Questions_profile01.dart';
+import 'package:pro_healer_three_circles/registration/profile_questions/create_profile.dart';
 import 'package:pro_healer_three_circles/registration/profile_questions/new_profile.dart';
+//import 'package:pro_healer_three_circles/registration/profile_questions/new_profile.dart';
 import 'package:pro_healer_three_circles/registration/profile_questions/resume_building.dart';
+import 'package:pro_healer_three_circles/registration/profile_questions/skill.dart';
+import 'package:pro_healer_three_circles/registration/profile_questions/work_Charges.dart';
+import 'package:pro_healer_three_circles/registration/profile_questions/work_Type.dart';
 import 'package:pro_healer_three_circles/registration/verification.dart';
 
 import 'constants/Api_strings.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp( const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -32,7 +39,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home:Experience(),
+      home:WorkType(),
     );
   }
 }
