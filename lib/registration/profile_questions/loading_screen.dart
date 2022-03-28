@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:pro_healer_three_circles/registration/profile_questions/questions_profile02.dart';
 import 'package:pro_healer_three_circles/registration/profile_questions/resume_building.dart';
@@ -21,11 +19,8 @@ class _loadingScreenState extends State<loadingScreen> {
     return Scaffold(
       appBar: MyAppbar(
         img: 'images/profile.png',
-
       ),
-
       body: Center(
-
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -38,17 +33,18 @@ class _loadingScreenState extends State<loadingScreen> {
                   color: Colors.black,
                 ),
               ),
-              NavButton(widt: 10.0, color:Colors.blueGrey, heig: 5.0, txtcolor: Colors.white, page: resumeScreen(), text: 'Get Started',),
-
+              NavButton(
+                widt: 10.0,
+                color: Colors.blueGrey,
+                heig: 5.0,
+                txtcolor: Colors.white,
+                page: resumeScreen(),
+                text: 'Get Started',
+              ),
             ],
-
           ),
-
         ),
-
       ),
-
-
     );
   }
 }

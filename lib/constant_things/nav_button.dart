@@ -25,7 +25,7 @@ class NavButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
         onPressed: () {
-          if(onpressed==1)
+          if(onpressed>1)
             {
               return onpressed;
             }

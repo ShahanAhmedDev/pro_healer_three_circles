@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:pro_healer_three_circles/registration/profile_questions/new_profile.dart';
+//import 'package:pro_healer_three_circles/registration/profile_questions/new_profile.dart';
 import '../../constant_things/appbar_widget.dart';
 import '../../constant_things/footer.dart';
 import '../../constant_things/nav_button.dart';
 import '../verification.dart';
 import 'Questions_profile01.dart';
 import 'loading_screen.dart';
+import 'new_profile.dart';
 //import 'package:loginpageui/widgets/appbar_widget.dart';
 
 class resumeScreen extends StatefulWidget {
@@ -41,12 +42,15 @@ class _resumeScreenState extends State<resumeScreen> {
                           color: Colors.black,
                         ),
                       ),
-                      Text(
-                        'We need to get the sense of your education, Its quickest to import your information-you can edit before your profile go live.',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 50.0),
+                        child: Text(
+                          'We need to get the sense of your education, Its quickest to import your information-you can edit before your profile go live.',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                       SizedBox(

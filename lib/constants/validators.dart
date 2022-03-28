@@ -40,6 +40,13 @@ class validation{
   }
 }
 
+language(String language, {String val = "Beginner"})
+{
+  if (language==true){
+    return(val);
+  }
+}
+
 
 
 

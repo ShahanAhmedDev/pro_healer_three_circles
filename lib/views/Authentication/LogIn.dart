@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pro_healer_three_circles/registration/account_setup.dart';
 import 'package:pro_healer_three_circles/services/network/auth_service/auth_class.dart';
 import '../../constants/color_constant.dart';
 import '../../constants/nav_button.dart';
@@ -404,7 +405,13 @@ class _LogInScreenState extends State<LogInScreen> {
                           FadeAnimation(
                             delay: 1,
                             child: TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                   Navigator.pushNamed(context, '/fourth');
+                                  // Navigator.of(context).push(
+                                  //     MaterialPageRoute(builder: (context) {
+                                  //       return firstScreen();
+                                  //     }));
+                                },
                                 child: Text(
                                   "Login",
                                   style: GoogleFonts.heebo(

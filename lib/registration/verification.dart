@@ -5,6 +5,7 @@ import 'package:footer/footer.dart';
 //import 'package:footer/footer.dart';
 //import 'package:footer/footer_view.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pro_healer_three_circles/registration/account_setup.dart';
 import 'package:pro_healer_three_circles/registration/profile_questions/create_profile.dart';
 import '../constant_things/appbar_widget.dart';
 import '../constant_things/footer.dart';
@@ -35,12 +36,10 @@ class _verifyAccountState extends State<verifyAccount> {
             children: [
               TextButton(
                   onPressed: () {
-                    // Navigator.of(context).push(MaterialPageRoute(builder: (context)
-                    // {
-                    //   return const verifyAccount();
-                    // }
-                    // )
-                    // );
+                    Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (context) {
+                      return firstScreen();
+                    }));
                   },
                   child: Text(
                     "Get Started",
@@ -52,7 +51,7 @@ class _verifyAccountState extends State<verifyAccount> {
                     ),
                   ),
                   style: TextButton.styleFrom(
-                    // alignment: Alignment.topRight,
+                      // alignment: Alignment.topRight,
                       backgroundColor: Colors.blueGrey,
                       padding: const EdgeInsets.symmetric(
                           vertical: 10.0, horizontal: 10),
@@ -65,7 +64,7 @@ class _verifyAccountState extends State<verifyAccount> {
               children: [
                 Container(
                   margin: EdgeInsets.only(
-                      left:100.0, top: 5.0, right: 100.0, bottom: 5.0),
+                      left: 100.0, top: 5.0, right: 100.0, bottom: 5.0),
                   padding: EdgeInsets.all(10),
                   alignment: Alignment.center,
                   height: 300.0,
@@ -75,47 +74,55 @@ class _verifyAccountState extends State<verifyAccount> {
                       color: Colors.black, // Set border color
                       width: 1.0,
                     ), // Set border width
-                ),
-                child: Column(
-                  children: [
-                    CircleAvatar(
-                      backgroundImage: AssetImage(
-                        'images/computer.jpg',
+                  ),
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        backgroundImage: AssetImage(
+                          'images/computer.jpg',
+                        ),
+                        radius: (50.0),
                       ),
-                      radius: (50.0),
-                    ),
-                    SizedBox(
-                      height: 5.0,
-                    ),
-                    // ),
-                    Text(
-                      'Verify your email to proceed',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(
-                      height: 20.0,
-                    ),
-                    Text(
-                      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,',
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(
-                      height: 20.0,
-                    ),
-                    NavButton(
-                      widt: 10.0,
-                      color: Colors.blueGrey,
-                      heig: 5.0,
-                      txtcolor: Colors.white,
-                      page: CreateProfile(),
-                      text: 'Resend Verification Email',
+                      SizedBox(
+                        height: 5.0,
+                      ),
+                      // ),
+                      Text(
+                        'Verify your email to proceed',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,',
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      NavButton(
+                        widt: 10.0,
+                        color: Colors.blueGrey,
+                        heig: 5.0,
+                        txtcolor: Colors.white,
+                        page: CreateProfile(),
+                        text: 'Resend Verification Email',
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 40.0,
+                ),
+                Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 300.0),
+                      child: BottomFooter(),
                     ),
                   ],
                 ),
-                ),
-                SizedBox(height: 40.0,),
-               BottomFooter(),
-
               ],
             ),
           ),
@@ -124,4 +131,3 @@ class _verifyAccountState extends State<verifyAccount> {
     );
   }
 }
-
